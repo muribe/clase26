@@ -1,5 +1,5 @@
 class Alumno
-    attr_accessor :alumno
+    # attr_accessor :alumno
     def initialize()
         @alumno = Array.new()
         @avg_alumnos = Array.new()
@@ -15,7 +15,7 @@ class Alumno
                 sum += v if v.to_i > 0   
             end
             @avg_alumnos.push(sum.to_f/4)
-            puts "#{@avg_alumnos[i]}\n"
+            # puts "#{@avg_alumnos[i]}\n"
             avg_curso += @avg_alumnos[i]
         end
         avg_curso/4
@@ -26,7 +26,6 @@ class Alumno
 end
 
 alumno = Alumno.new
-# print alumno.alumno
 puts "El promedio del curso es: #{alumno.avg_curso.round(2)}\n"
 puts "El alumno con el promedio mas alto es: #{alumno.max_avg}"
 
